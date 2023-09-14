@@ -1,0 +1,28 @@
+---
+################################################################################
+# battery.yaml - Parameters for specifying a battery within CLOVER.            #
+#                                                                              #
+# Author: Phil Sandwell, Ben Winchester                                        #
+# Copyright: Phil Sandwell & Ben Winchester, 2021                              #
+# Date created: 12/08/2021                                                     #
+# License: Open source                                                         #
+################################################################################
+
+- name: default_battery
+  maximum_charge: 1.0 # State of charge (0.0 - 1.0)
+  minimum_charge: 0.2 # State of charge (0.0 - 1.0)
+  leakage: 0.00019 # Fractional leakage per hour
+  conversion_in: 0.93 # Conversion efficiency (0.0 - 1.0)
+  conversion_out: 0.93 # Conversion efficiency (0.0 - 1.0)
+  cycle_lifetime: 5000 # Expected number of cycles over lifetime
+  lifetime_loss: 0.2 # Fractional loss over lifetime (0.0 - 1.0)
+  c_rate_discharging: 1.5 # Discharge rate
+  c_rate_charging: 1.0 # Charge rate
+  costs:
+    cost: 375 # [$/storage unit], [$/kWh] by default
+    cost_decrease: 0 # [% p.a.]
+    o&m: 0 # [$/storage unit], [$/kWh] by default
+  emissions:
+    ghgs: 110 # [kgCO2/kWh]
+    o&m: 0 # [kgCO2/kWh p.a.]
+    ghg_decrease: 0 # [% p.a.]
