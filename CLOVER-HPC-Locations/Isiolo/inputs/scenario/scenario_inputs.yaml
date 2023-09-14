@@ -1,0 +1,69 @@
+---
+################################################################################
+# scenario_inputs.yaml - Parameters for specifying a scenario.                 #
+#                                                                              #
+# Author: Phil Sandwell, Ben Winchester                                        #
+# Copyright: Phil Sandwell & Ben Winchester, 2021                              #
+# Date created: 14/07/2021                                                     #
+# License: Open source                                                         #
+################################################################################
+
+scenarios:
+  - name: default
+    battery: true # "true" or "false"
+    demands:
+      domestic: false # "true" or "false"
+      commercial: false # "true" or "false"
+      public: true # "true" or "false"
+    diesel:
+      mode: disabled # "backup" or "disabled" currently supported
+      backup:
+        threshold: 0.1 # Maximum acceptible blackouts (0.0-1.0)
+    distribution_network: ac # DC ("dc") or AC ("ac") distribution network
+    grid: false # "true" or "false"
+    grid_type: none # The grid profile to use
+    prioritise_self_generation: true # "true" or "false"
+    pv: true # "true" or "false"
+    resource_types:
+      - electric_power
+  - name: impala
+    battery: true # "true" or "false"
+    demands:
+      domestic: false # "true" or "false"
+      commercial: false # "true" or "false"
+      public: true # "true" or "false"
+    diesel:
+      mode: disabled # "backup" or "disabled" currently supported
+      backup:
+        threshold: 0.1 # Maximum acceptible blackouts (0.0-1.0)
+    fixed_inverter_size: 2 # [kW] A fixed inverter size in kW if specified
+    distribution_network: ac # DC ("dc") or AC ("ac") distribution network
+    grid: false # "true" or "false"
+    grid_type: none # The grid profile to use
+    prioritise_self_generation: true # "true" or "false"
+    pv: true # "true" or "false"
+    resource_types:
+      - electric_power
+  - name: rhino
+    battery: true # "true" or "false"
+    demands:
+      domestic: false # "true" or "false"
+      commercial: false # "true" or "false"
+      public: true # "true" or "false"
+    diesel:
+      mode: disabled # "backup" or "disabled" currently supported
+      backup:
+        threshold: 0.1 # Maximum acceptible blackouts (0.0-1.0)
+    fixed_inverter_size: 3 # [kW] A fixed inverter size in kW if specified
+    distribution_network: ac # DC ("dc") or AC ("ac") distribution network
+    grid: false # "true" or "false"
+    grid_type: none # The grid profile to use
+    prioritise_self_generation: true # "true" or "false"
+    pv: true # "true" or "false"
+    resource_types:
+      - electric_power
+
+
+
+
+
